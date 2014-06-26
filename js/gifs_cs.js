@@ -3,22 +3,9 @@ function appendGifButton(buttonDestination){
     var htmlStr = '<div class="gif-app-wrapper">';
     htmlStr += '<button class="gif-insert-button">Insert GIF</button>';
     htmlStr += '</div>';
-
-/*
-    var buttonRow = $("div.aDh");
-    
-    console.log(buttonRow);
-    
-    if(buttonRow["length"] > 0){
-        $(buttonRow).each(function(){
-    
-            var buttonDestination = $(buttonRow).closest("td.HE").find("div.aDj");
-*/
             
             $(buttonDestination).find(".gif-app-wrapper").remove()//remove any dups.
         
-/*                 $(htmlStr).appendTo(buttonDestination).each(function(){ */
-
                 $(htmlStr).insertAfter(buttonDestination).each(function(){                            
                     
                     var insertButton = $(this).find(".gif-insert-button");
@@ -31,15 +18,6 @@ function appendGifButton(buttonDestination){
                 
             });
             
-/*
-        });    
-    } else {
-    
-        setTimeout(appendGifButton, 1000);//if we can't find where to append this button, try again in 1 second 5/10/14 KL
-    
-    }
-*/
-
 }
 
 function openFunnyImageGallery(buttonClicked){

@@ -1,0 +1,32 @@
+{
+  "name": "Gmail GIF",
+  "description": "GIFs",
+  "version": "1",
+  "permissions": [
+    "https://textyserver.appspot.com/*",
+    "https://mighty-app.appspot.com/*",
+    "https://mightytext.co/*",
+    "https://mail.google.com/mail/*",
+    "tabs", 
+    "webNavigation",
+    "storage",
+    "contextMenus",
+    "activeTab",
+    "notifications"
+  ],
+  "web_accessible_resources": [
+  ],
+  "content_scripts": [
+    {
+      "matches": ["*://mail.google.com/mail/*"],
+      "css": ["css/gifs.css", "css/font-awesome-4.0.3/css/font-awesome.css"],
+      "js": [ "libs/jquery-2.1.0.min.js","libs/mutation_summary.js","js/gifs_cs.js"],
+      "run_at": "document_end"
+    }
+  ],
+  "background": {
+      "page" : "background.html"
+  },
+  "content_security_policy": "object-src 'self';   script-src 'self' https://textyserver.appspot.com https://mighty-app.appspot.com https://talkgadget.google.com https://ssl.google-analytics.com https://ajax.googleapis.com https://i.kissmetrics.com https://*.cloudfront.net https://mightytext.net https://static.intercomcdn.com https://api.intercom.io https://www.googleapis.com https://*.bootstrapcdn.com/ https://mightytext.co",
+  "manifest_version": 2
+}

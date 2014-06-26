@@ -1,0 +1,84 @@
+.gif-app-wrapper{
+    position: relative;
+    padding: 5px;
+    border: 1px solid #CCC;
+    border-top: 0px;
+    margin: 0px -1px;
+    background-color: #F5F5F5;
+}
+    .gif-insert-button{
+        border: 0px;
+        background-color: #FFCC00;
+        color: #FFF;
+        border-radius: 2px;
+        padding: 8px 10px;
+        font-weight: bold;
+        font-size: 10.5px;
+    }
+        .gif-insert-button:hover{
+            cursor: pointer;
+            background-color: #ECBE03;
+        }
+    .gif-gallery-container{
+        position: absolute;
+        top: 100px;
+        bottom: 100px;
+        left: 200px;
+        right: 200px;  
+        z-index: 99999;       
+        background-color: #ffffff;  
+        border: 1px solid #ACACAC;
+        color: #000;
+        -webkit-box-shadow: rgba(0, 0, 0, 0.2) 0 4px 16px;
+        box-shadow: rgba(0, 0, 0, 0.2) 0 4px 16px;
+        padding: 20px 10px;
+    }
+        .gif-gallery-outer-wrapper{
+/*             max-width: 360px;  */
+            height: 100%; 
+            overflow-x: hidden;
+            overflow-y: scroll;
+            z-index: 1;
+        }
+            .gif-gallery-inner-wrapper{
+/*                 width: 700px; */
+            }
+                .gif-image-wrapper{
+                    display:inline-block;
+                    height: auto;
+                    width: auto;
+                    overflow: hidden;
+                    margin: 5px; 
+                    border: 5px solid rgba(0,0,0,0);
+                }
+                    .gif-image-wrapper:hover{
+                        cursor: pointer;
+                        border-color: #42AEF7;
+                    }
+                    .gif-image{
+                        display: block;
+                        margin: 0 auto;
+/*                         max-height:200px; */
+                        height: 180px;
+                        width: auto;
+                    }
+        .gif-gallery-backdrop{
+            top: 0px;
+            left: 0px;
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            background-color: #ffffff;
+            opacity: 0.7;
+            z-index: -1;
+        }
+    .gif-gallery-remove-button{
+        position: absolute;
+        font-size: 20px;
+        top: -10px;
+        right: -10px;
+        line-height: 1em;
+    }
+        .gif-gallery-remove-button:hover{
+            cursor: pointer;
+        }
